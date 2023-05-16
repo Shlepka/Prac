@@ -1,0 +1,89 @@
+﻿<Window x:Class="Sanatorium.ViewDoctors.AddAndEditDoctors"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sanatorium.ViewDoctors"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+       Title="AddAndEditPatients"  Height="560" Width="600">
+    <Grid Margin="10"
+          VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <Label
+                Content="Фамилия :" />
+            <TextBox
+               Text= "{Binding DoctorSurname}" />
+        </StackPanel>
+        <StackPanel
+            Grid.Row="1">
+            <Label
+                Content="Имя:" />
+            <TextBox
+                Text="{Binding DoctorName}"/>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="2">
+            <Label
+                Content="Отчество:" />
+            <TextBox
+                Text="{Binding DoctorPatronymic}"/>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="6">
+            <Label
+                Content="Телефон:" />
+            <TextBox
+                Text="{Binding Phone}"/>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="7">
+            <TextBlock
+                Text="Специальность:" />
+            <ComboBox DisplayMemberPath="Speciality"
+                Name="cmbSpeciality"/>
+        </StackPanel>
+       
+        <Button
+            Name="btnSave"
+            Click="btnSave_Click"
+            Grid.Row="9"
+            ToolTip="8"
+            Margin="10"
+            Content="Сохранить" />
+        <Button  
+            Name="btnBack"
+            Click="btnBack_Click"
+            Grid.Row="11"
+            ToolTip="8"
+            Margin="10"
+            Content="Отмена" />
+
+    </Grid>
+</Window>
